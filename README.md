@@ -1,4 +1,4 @@
-ENESCU MARIA 311CA
+ENESCU MARIA
 
 # Stegano Flask Web Application
 
