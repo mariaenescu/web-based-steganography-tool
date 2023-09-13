@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<script>
+  var loadFile = function(event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+<div class="encode">
+  <h1> Encode message in image </h1>
+  <form method="POST" action="/encode" enctype="multipart/form-data">
+    <div class="form-group">
+      <label>Image: </label>
+      <input type="file" name="file" accept="image/*" id="file" onchange="loadFile(event)">
+    </div>
+    <div class="form-group">
+      <label>Message to be encoded: </label>
+      <input type="string" id="message" name="message">
+    </div>
+
+    <div class="form-group">
+      <label>Name for new image: </label>
+      <input type="string" id="new_mage" name="new_image">
+    </div>
+
+    <div class="form-group">
+      <button>Encode</button>
+    </div>
+
+    <p><img id="output"/></p>
+    
+  </form>
+
+</div>
+{% endblock %}

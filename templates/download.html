@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="general">
+        <h1> Save the new image </h1>
+        <form method="POST" action="/download" enctype="multipart/form-data">
+          <div class="form-group">
+            <label>New image name:</label>
+            <input class="txt" type="text" value={{name}} name="file_path" readonly>
+          </div>
+          <div class="form-group">
+            <button>Download</button>
+          </div>
+        </form>
+    </div>
+{% endblock %}

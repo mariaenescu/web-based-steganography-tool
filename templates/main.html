@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="index">
+        <h1> Homepage of Encode/Decode text using steganography </h1>
+        <form method="POST" action="/main_encode">
+			<button>Encode</button>
+        </form>
+		<form method="POST" action="/main_decode">
+			<button>Decode</button>
+        </form>
+    </div>
+{% endblock %}
